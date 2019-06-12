@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<meta http-equiv="refresh" content="20"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>AweSum</title>
+	<style>
+	
+	#cdDiv{font-size:70px; color:green;}
+	</style>
+</head>
+<body onload="start()">
+
+
+<center style="padding-top: 16vh;">
+
+<p style="font-family:Futura; font-size: 50px;">AweSum</p>
+
+
+
+
+
+<div id="cdDiv">20 </div>Time
+<p>
+  
+ <input type="text" id="txt1" name="text1" size="10"> +
+  
+  <input type="text" id="txt2" name="text2" size="10"><br><br>
+  <input type="text" id="txt3" name="text3" size="10" autofocus>
+  
+  
+</p>
+<button onclick="myFunction();" id="btn">Click Here</button>
+</center>
+
+
+<script>
+var y = document.getElementById("txt1").value=Math.floor(Math.random() * 100);
+ var z = document.getElementById("txt2").value=Math.floor(Math.random() * 100);
+ var sum = z+y;
+ 
+function myFunction() { 
+var x = document.getElementById("txt3").value;
+if(x == ""){
+alert("Enter your Number");
+  }else if (x != sum){
+  alert("You Are Just A Loser !");
+  }else{
+  alert("You Rock My World !");
+  }
+}
+
+var clock = 20;
+var countdownId = 0;
+ function start() {
+countdownId = setInterval("countdown()", 1000);
+}
+function countdown(){
+
+            if(clock > 0){
+clock = clock - 1;
+document.getElementById('cdDiv').innerHTML = clock;
+
+         }
+else {
+clearInterval(countdownId);
+
+            }
+			}
+
+
+</script>
+</body>
+
+</html>
